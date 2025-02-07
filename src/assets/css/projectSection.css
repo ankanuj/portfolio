@@ -1,0 +1,13 @@
+.projectSecion{
+    width: 100%;
+    height: auto;
+}
+.projHeader{
+    background-color: var(--dark-bg);
+    padding: var(--16px) 0;
+}
+.sectionTitle{
+    font-size: var(--32px);
+    font-weight: 400;
+    color: var(--primary-color);
+}

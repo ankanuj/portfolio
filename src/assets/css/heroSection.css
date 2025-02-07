@@ -1,0 +1,77 @@
+.heroContainer{
+    padding: var(--120px) 0;
+    gap: var(--20px);
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+.heroDetailsBtnContainer{
+    gap: var(--48px);
+}
+.heroAvatar{
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(145deg,#6DE997,#09AE41);
+    border-radius: var(--28px);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.heroName{
+    font-size: var(--28px);
+    font-weight: 400;
+}
+.heroDetailsBox{
+    width: 770px;
+}
+.heroTitle{
+    font-size: var(--96px);
+    font-weight: 700;
+}
+.heroDescription{
+    font-size: var(--28px);
+    font-weight: 300;
+    text-align: center;
+    width: 540px;
+}
+.ctaBtn{
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 var(--40px);
+    height: 48px;
+    border-radius: var(--8px);
+    font-size: var(--20px);
+}
+.ctaBtnPrimary{
+    background-color: var(--primary-color);
+    box-shadow: 0 4px 9px rgba(11, 218, 80, 0.12),0 16px 16px rgba(11, 218, 80, 0.10),0 36px 22px rgba(11, 218, 80, 0.06),0 65px 26px rgba(11, 218, 80, 0.02),0 101px 28px rgba(11, 218, 80, 0);
+}
+.bgMash{
+    width: 40%;
+    height: 50%;
+    position: absolute;
+}
+.bgMash1, .bgMash2{
+    display: block;
+    width: 360px;
+    height: 360px;
+    border-radius: 50%;
+    filter: blur(180px);    
+}
+.bgMash1{
+    background-color: rgba(0, 229, 255, 0.16);
+    position: absolute;
+    left: -40px;
+    bottom: -110px;
+}
+.bgMash2{
+    background-color: rgba(238, 0, 255, 0.13);
+    position: absolute;
+    right: -49px;
+    top: 0;
+}
