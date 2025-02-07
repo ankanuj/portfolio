@@ -1,13 +1,55 @@
 .projectSecion{
     width: 100%;
     height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 .projHeader{
     background-color: var(--dark-bg);
     padding: var(--16px) 0;
+    width: 100%;
 }
 .sectionTitle{
     font-size: var(--32px);
     font-weight: 400;
     color: var(--primary-color);
+}
+.projectContainer{
+    max-width: 1200px;
+    height: 560px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.projectContentBox{
+    width: 50%;
+    gap: var(--42px);
+    padding: 0 var(--42px);
+}
+.contentBox{
+    gap: var(--20px);
+}
+.projectName{
+    font-size: var(--56px);
+    font-weight: 400;
+}
+.projectDescription{
+    font-size: var(--24px);
+    font-weight: 300;
+    color: var(--secondary-text-color);
+}
+.linkBtn{
+    background-color: var(--dark-bg);
+    font-size: var(--16px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--8px);
+    border-radius: var(--8px);
+    height: 40px;
+    padding: 0 var(--16px);
+    color: var(--light-text-color);
+}
+.projectImageBox{
+    flex: 1;
 }

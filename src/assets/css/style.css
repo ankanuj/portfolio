@@ -42,6 +42,7 @@
   --primary-color: #0BDA51;
   --light-text-color: #EDEDED;
   --dark-text: #333333;
+  --secondary-text-color: #6E6E6E;
   --border-dark: #444444;
 }
 *{
@@ -184,4 +185,7 @@ body {
   .grow {
     flex-grow: 1;
   }
-  
+  .btn{
+    outline: none;
+    border: none;
+  }
