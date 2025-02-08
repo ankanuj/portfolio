@@ -1,0 +1,63 @@
+---
+import '../assets/css/style.css'
+import '../assets/css/testimonialSection.css'
+const usersRow1 = [
+    {image : "", blankImageClass: "uP1"},
+    {image : "", blankImageClass: "uP2"},
+    {image : "/chinmayAv.png"},
+    {image : "im5.png"},
+    {image : "im7.png"},
+    {image : "im6.png"},
+    {image : "", blankImageClass: "uP2"},
+    {image : "", blankImageClass: "uP1"},
+];
+const usersRow2 = [
+    {image : "", blankImageClass: "uP1"},
+    {image : "", blankImageClass: "uP2"},
+    {image : "im5.png"},
+    {image : "im6.png"},
+    {image : "im7.png"},
+    {image : "im8.png"},
+    {image : "", blankImageClass: "uP2"},
+    {image : "", blankImageClass: "uP1"},
+];
+---
+<section class="textimonialSection flex justify-center">
+    <div class="testimonialContainer flex flex-col items-center">
+        <div class="testimonialTitleAndPics flex flex-col items-center">
+            <h3 class="sectionTitle">What leaders and colleagues says</h3>
+            <div class="usersPicsContainer">
+                {usersRow1.map(item => {
+                    return (
+                    <div class={`userPic ${item.blankImageClass ?? ""}`}>
+                        {item.image ? <img src={item.image} alt="User Image" /> : null}
+                    </div>
+                    );
+                  })}
+            </div>
+            <div class="usersPicsContainer">
+                {usersRow2.map(item => {
+                    return (
+                    <div class={`userPic ${item.blankImageClass ?? ""}`}>
+                        {item.image ? <img src={item.image} alt="User Image" /> : null}
+                    </div>
+                    );
+                  })}
+            </div>
+        </div>
+        <div class="testimonialsContent flex flex-col">
+            <div class="textimonialContentBox flex flex-col items-center justify-center">
+                <p class="testimonialDescp">" Anuj has an exceptional eye for design and a hands-on approach to user experience. Having worked alongside him, I’ve seen how his expertise in UI/UX, combined with his skills in web design, consistently elevates the quality of projects we work on. "</p>
+               <div class="givenNamePic flex items-center gap-8">
+                    <span class="givenAvatar">
+                        <img src="/chinmayAv.png" alt="User Avatar" >
+                    </span>    
+                    <span class="flex flex-col ">
+                        <p class="givenName">Chinmay Vijayanand Gaikawad</p>
+                        <p class="givenDesignation">Full Stack Developer</p>
+                    </span>
+               </div>
+            </div>
+        </div>
+    </div>
+</section>

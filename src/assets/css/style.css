@@ -23,7 +23,10 @@
   --40px: 2.5rem;
   --42px: 2.625rem;
   --48px: 3rem;
+  --50px: 3.125rem;
   --56px: 3.5rem;
+  --60px: 3.75rem;
+  --62px: 3.875rem;
   --64px: 4rem;
   --72px: 4.5rem;
   --80px: 5rem;
@@ -44,6 +47,7 @@
   --dark-text: #333333;
   --secondary-text-color: #6E6E6E;
   --border-dark: #444444;
+  --border-light: #DDDDDD;
 }
 *{
     margin: 0;
