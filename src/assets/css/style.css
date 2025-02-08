@@ -185,7 +185,21 @@ body {
   .grow {
     flex-grow: 1;
   }
-  .btn{
+.btn{
     outline: none;
     border: none;
-  }
+}
+.btn:hover{
+    cursor: pointer;
+}
+.sectionTitle{
+    font-size: var(--32px);
+    font-weight: 400;
+    color: var(--primary-color);
+}
+.iconBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--4px);
+}

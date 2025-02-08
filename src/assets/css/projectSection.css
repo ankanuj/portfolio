@@ -7,24 +7,29 @@
 }
 .projHeader{
     background-color: var(--dark-bg);
-    padding: var(--16px) 0;
+    padding: var(--28px) 0;
     width: 100%;
 }
-.sectionTitle{
-    font-size: var(--32px);
-    font-weight: 400;
-    color: var(--primary-color);
+.projectContentContainer{
+    height: auto;
+    width: 100%;
+    background-color: var(--dark-bg);
 }
 .projectContainer{
     max-width: 1200px;
     height: 560px;
     width: 100%;
     flex-wrap: wrap;
+    background-color: var(--dark-bg);
+    overflow: visible;
+    position: sticky;
+    top: 0;
 }
 .projectContentBox{
     width: 50%;
     gap: var(--42px);
     padding: 0 var(--42px);
+    min-width: 300px;
 }
 .contentBox{
     gap: var(--20px);
@@ -32,24 +37,73 @@
 .projectName{
     font-size: var(--56px);
     font-weight: 400;
+    color: var(--light-text-color);
 }
 .projectDescription{
     font-size: var(--24px);
     font-weight: 300;
-    color: var(--secondary-text-color);
+    color: var(--light-text-color);
+    font-weight: 300;
 }
 .linkBtn{
-    background-color: var(--dark-bg);
+    background-color: var(--primary-color);
     font-size: var(--16px);
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: var(--8px);
+    gap: var(--4px);
     border-radius: var(--8px);
     height: 40px;
     padding: 0 var(--16px);
-    color: var(--light-text-color);
+    padding-left: var(--12px);
+    color: var(--dark-bg);
+    font-weight: 500;
+}
+.linkBtn:hover{
+    box-shadow: 0 4px 9px rgba(11, 218, 80, 0.12),0 16px 16px rgba(11, 218, 80, 0.10),0 36px 22px rgba(11, 218, 80, 0.06),0 65px 26px rgba(11, 218, 80, 0.02),0 101px 28px rgba(11, 218, 80, 0);
+}
+.linkBtn .iconBox{
+    height: 20px;
+    width: 20px;
+}
+.iconBox svg{
+    width: 20px;
+    height: 20px;
 }
 .projectImageBox{
     flex: 1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-width: 300px;
+}
+.pC1 .projectImageBox{
+    background-image: url('/pronnelProj.png');
+}
+.pC2 .projectImageBox{
+    background-image: url('/arrowShot.png');
+}
+.pC3 .projectImageBox{
+    background-image: url('/veritasProj.png');
+}
+.liveText{
+    font-size: var(--16px);
+    color: var(--primary-color);
+    text-decoration: none;
+    position: relative;
+}
+.liveText::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: var(--2px);
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    transition: width 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+    bottom: -4px;
+    position: absolute;
+    left: 0;
+}
+.liveText:hover::after{
+    width: 96px;
 }

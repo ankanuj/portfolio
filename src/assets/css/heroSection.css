@@ -21,7 +21,7 @@
 }
 .heroName{
     font-size: var(--28px);
-    font-weight: 400;
+    font-weight: 400; 
 }
 .heroDetailsBox{
     width: 770px;
@@ -29,6 +29,7 @@
 .heroTitle{
     font-size: var(--96px);
     font-weight: 700;
+    color: var(--dark-bg);
 }
 .heroDescription{
     font-size: var(--28px);
