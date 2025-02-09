@@ -2,24 +2,24 @@
 import '../assets/css/style.css'
 import '../assets/css/testimonialSection.css'
 const usersRow1 = [
-    {image : "", blankImageClass: "uP1"},
-    {image : "", blankImageClass: "uP2"},
-    {image : "/chinmayAv.png"},
-    {image : "im5.png"},
-    {image : "im7.png"},
+    { blankImageClass: "uP1"},
+    { blankImageClass: "uP2"},
+    {image : "/chinmayAv.png", name: "Chinmay Vijayanand Gaikawad", designation: "Full Stack Developer", feedback: "Anuj has an exceptional eye for design and a hands-on approach to user experience. Having worked alongside him, I’ve seen how his expertise in UI/UX, combined with his skills in web design, consistently elevates the quality of projects we work on. "},
+    {image : "sneha.png",name: "Sneha Ojha", designation: "Full Stack Developer",feedback: "One of the things I admire most about Anuj is his creativity and ability to think outside the box. Their innovative approach led to significant improvements in processes and outcomes. His fresh perspective and willingness to challenge the status make his an invaluable asset to any team."},
+    {image : "neeraj.png",name: "Neeraj Suman", designation: "Offensive Security Certified Professional & Software Developer",feedback: "He is a professional UI/UX designer. I know him personally and I can say he is a really talented one in his profession."},
     {image : "im6.png"},
-    {image : "", blankImageClass: "uP2"},
-    {image : "", blankImageClass: "uP1"},
+    {blankImageClass: "uP2"},
+    {blankImageClass: "uP1"},
 ];
 const usersRow2 = [
-    {image : "", blankImageClass: "uP1"},
-    {image : "", blankImageClass: "uP2"},
+    {blankImageClass: "uP1"},
+    {blankImageClass: "uP2"},
     {image : "im5.png"},
     {image : "im6.png"},
     {image : "im7.png"},
     {image : "im8.png"},
-    {image : "", blankImageClass: "uP2"},
-    {image : "", blankImageClass: "uP1"},
+    {blankImageClass: "uP2"},
+    {blankImageClass: "uP1"},
 ];
 ---
 <section class="textimonialSection flex justify-center">
@@ -30,7 +30,7 @@ const usersRow2 = [
                 {usersRow1.map(item => {
                     return (
                     <div class={`userPic ${item.blankImageClass ?? ""}`}>
-                        {item.image ? <img src={item.image} alt="User Image" /> : null}
+                        {item.image ? <img src={item.image} alt="User Avatar" /> : null}
                     </div>
                     );
                   })}
@@ -39,25 +39,35 @@ const usersRow2 = [
                 {usersRow2.map(item => {
                     return (
                     <div class={`userPic ${item.blankImageClass ?? ""}`}>
-                        {item.image ? <img src={item.image} alt="User Image" /> : null}
+                        {item.image ? <img src={item.image} alt="User Avatar" /> : null}
                     </div>
                     );
                   })}
             </div>
         </div>
         <div class="testimonialsContent flex flex-col">
-            <div class="textimonialContentBox flex flex-col items-center justify-center">
-                <p class="testimonialDescp">" Anuj has an exceptional eye for design and a hands-on approach to user experience. Having worked alongside him, I’ve seen how his expertise in UI/UX, combined with his skills in web design, consistently elevates the quality of projects we work on. "</p>
-               <div class="givenNamePic flex items-center gap-8">
-                    <span class="givenAvatar">
-                        <img src="/chinmayAv.png" alt="User Avatar" >
-                    </span>    
-                    <span class="flex flex-col ">
-                        <p class="givenName">Chinmay Vijayanand Gaikawad</p>
-                        <p class="givenDesignation">Full Stack Developer</p>
-                    </span>
-               </div>
-            </div>
+            {usersRow1.map(item => {
+                        return (
+                       (!item.blankImageClass?  <div class="textimonialContentBox flex flex-col items-center justify-center">
+                                {item.feedback? 
+                                    <p class="testimonialDescp"> 
+                                        <span class="iconBox quote1"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-quote"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 5a2 2 0 0 1 2 2v6c0 3.13 -1.65 5.193 -4.757 5.97a1 1 0 1 1 -.486 -1.94c2.227 -.557 3.243 -1.827 3.243 -4.03v-1h-3a2 2 0 0 1 -1.995 -1.85l-.005 -.15v-3a2 2 0 0 1 2 -2z" /><path d="M18 5a2 2 0 0 1 2 2v6c0 3.13 -1.65 5.193 -4.757 5.97a1 1 0 1 1 -.486 -1.94c2.227 -.557 3.243 -1.827 3.243 -4.03v-1h-3a2 2 0 0 1 -1.995 -1.85l-.005 -.15v-3a2 2 0 0 1 2 -2z" /></svg></span>
+                                        {item.feedback}
+                                        <span class="iconBox quote2"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-quote"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 5a2 2 0 0 1 2 2v6c0 3.13 -1.65 5.193 -4.757 5.97a1 1 0 1 1 -.486 -1.94c2.227 -.557 3.243 -1.827 3.243 -4.03v-1h-3a2 2 0 0 1 -1.995 -1.85l-.005 -.15v-3a2 2 0 0 1 2 -2z" /><path d="M18 5a2 2 0 0 1 2 2v6c0 3.13 -1.65 5.193 -4.757 5.97a1 1 0 1 1 -.486 -1.94c2.227 -.557 3.243 -1.827 3.243 -4.03v-1h-3a2 2 0 0 1 -1.995 -1.85l-.005 -.15v-3a2 2 0 0 1 2 -2z" /></svg></span>                                        
+                                     </p> : null }
+                            <div class="givenNamePic flex flex-col items-center gap-8">
+                                    <span class="givenAvatar">
+                                        {item.image ? <img src={item.image} alt="User Avatar" /> : null}
+                                    </span>    
+                                    <span class="flex flex-col items-center gap-4">
+                                        {item.name? <p class="givenName">{item.name}</p>: null}
+                                        {item.designation? <p class="givenDesignation">{item.designation}</p> : null}
+                                    </span>
+                            </div>
+                        </div> : null)
+                    
+                        );
+                    })}
         </div>
     </div>
 </section>

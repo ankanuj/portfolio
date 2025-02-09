@@ -38,3 +38,11 @@
 .socialLinks .iconBox:hover svg{
     color: var(--primary-color);
 }
+
+/* Responsive Css */
+
+@media (max-width: 430px){
+    .avatarBox p{
+        font-size: var(--16px);
+    }
+}

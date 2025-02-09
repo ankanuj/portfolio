@@ -58,6 +58,7 @@
     padding-left: var(--12px);
     color: var(--dark-bg);
     font-weight: 500;
+    text-decoration: none;
 }
 .linkBtn:hover{
     box-shadow: 0 4px 9px rgba(11, 218, 80, 0.12),0 16px 16px rgba(11, 218, 80, 0.10),0 36px 22px rgba(11, 218, 80, 0.06),0 65px 26px rgba(11, 218, 80, 0.02),0 101px 28px rgba(11, 218, 80, 0);
@@ -107,3 +108,33 @@
 .liveText:hover::after{
     width: 96px;
 }
+
+/* Responsive css */
+
+@media (max-width: 768px) {
+    .projectName{
+        font-size: var(--42px);
+    }
+    .projectDescriptio{
+        font-size: var(--20px);
+    }
+  }
+  @media (max-width: 430px) {
+    .projectContainer{
+        height: auto;
+    }
+    .projectContentBox{
+        width: 100%;
+        align-items: center;
+        padding: var(--42px);
+    }
+    .contentBox{
+        align-items: center;
+    }
+    .projectDescription{
+        text-align: center;
+    }
+    .projectImageBox{
+        height: 300px;
+    }
+   }
