@@ -97,4 +97,7 @@
    .heroDetailsBox, .heroDescription{
         width: auto;
    }
+   .heroDescription{
+    font-size: var(--20px);
+   }
   }

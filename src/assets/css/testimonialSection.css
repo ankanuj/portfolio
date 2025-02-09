@@ -27,6 +27,7 @@
     height: 110px;
     border-radius: var(--20px);
     overflow: hidden;
+    background-color: rgba(217, 217, 217, 0.3);
 }
 .uP1{
     background-color: rgba(217, 217, 217, 0.16);
@@ -100,11 +101,12 @@
 @media (max-width: 430px) {
     .testimonialDescp{
         font-size: var(--16px);
-        font-weight: 300;
+        /* font-weight: 300; */
     }
     .givenName{
         font-size: var(--14px);
-        font-weight: 300;
+        text-align: center;
+        /* font-weight: 300; */
     }
     .givenDesignation{
         font-size: var(--12px);

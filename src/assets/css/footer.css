@@ -45,4 +45,10 @@
     .avatarBox p{
         font-size: var(--16px);
     }
+    .footer{
+        padding: var(--16px) var(--20px);
+    }
+    .socialLinks{
+        gap: var(--8px) !important;
+    }
 }
