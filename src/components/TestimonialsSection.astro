@@ -4,9 +4,9 @@ import '../assets/css/testimonialSection.css'
 const usersRow1 = [
     { blankImageClass: "uP1"},
     { blankImageClass: "uP2"},
+    {image : "vipin.jpeg", name: "Vipin Sharma", designation: "Co-Founder at Pronnel",feedback: "I had the pleasure of working with Anuj for nearly three years at Athmin, where I served as CEO. From day one, he proved to be an invaluable asset—not just as a talented UI/UX designer but also as a team player who seamlessly fit into our company culture."},
     {image : "chinmayAv.png", name: "Chinmay Vijayanand Gaikawad", designation: "Full Stack Developer", feedback: "Anuj has an exceptional eye for design and a hands-on approach to user experience. Having worked alongside him, I’ve seen how his expertise in UI/UX, combined with his skills in web design, consistently elevates the quality of projects we work on. "},
-    {image : "sneha.png", name: "Sneha Ojha", designation: "Full Stack Developer",feedback: "One of the things I admire most about Anuj is his creativity and ability to think outside the box. Their innovative approach led to significant improvements in processes and outcomes. His fresh perspective and willingness to challenge the status make his an invaluable asset to any team."},
-    {image : "neeraj.png", name: "Neeraj Suman", designation: "Offensive Security Certified Professional & Software Developer",feedback: "He is a professional UI/UX designer. I know him personally and I can say he is a really talented one in his profession."},
+    {image : "sneha.png", name: "Sneha Ojha", designation: "Full Stack Developer",feedback: "One of the things I admire most about Anuj is his creativity and ability to think outside the box. Their innovative approach led to significant improvements in processes and outcomes. His fresh perspective and willingness to challenge the status make his an invaluable asset to any team."},    
     {image : "nischita.jpeg", name: "Nischitha N", designation: "Frontend Developer",feedback: "Anuj Chaudhary is an exceptional UI/UX designer, bringing creativity, technical expertise, and a user-centered approach to every project. His ability to craft intuitive, visually stunning experiences makes him an invaluable asset to any team."},
     {blankImageClass: "uP2"},
     {blankImageClass: "uP1"},
@@ -14,8 +14,8 @@ const usersRow1 = [
 const usersRow2 = [
     {blankImageClass: "uP1"},
     {blankImageClass: "uP2"},
-    {image : ""},
-    {image : ""},
+    {image : "neeraj.png", name: "Neeraj Suman", designation: "Offensive Security Certified Professional & Software Developer",feedback: "He is a professional UI/UX designer. I know him personally and I can say he is a really talented one in his profession."},
+    {image : "neha.jpeg", name: "Neha Maheshwari", designation: "Frontend Developer",feedback: "He is creative and detail-oriented designer with a passion for visual storytelling."},
     {image : ""},
     {image : ""},
     {blankImageClass: "uP2"},
@@ -48,7 +48,29 @@ const usersRow2 = [
         <div class="testimonialsContent flex flex-col">
             {usersRow1.map(item => {
                         return (
-                       (!item.blankImageClass?  <div class="textimonialContentBox flex flex-col items-center justify-center">
+                       (!item.blankImageClass ?  <div class="textimonialContentBox flex flex-col items-center justify-center">
+                                {item.feedback? 
+                                    <p class="testimonialDescp"> 
+                                        <span class="iconBox quote1"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-quote"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 5a2 2 0 0 1 2 2v6c0 3.13 -1.65 5.193 -4.757 5.97a1 1 0 1 1 -.486 -1.94c2.227 -.557 3.243 -1.827 3.243 -4.03v-1h-3a2 2 0 0 1 -1.995 -1.85l-.005 -.15v-3a2 2 0 0 1 2 -2z" /><path d="M18 5a2 2 0 0 1 2 2v6c0 3.13 -1.65 5.193 -4.757 5.97a1 1 0 1 1 -.486 -1.94c2.227 -.557 3.243 -1.827 3.243 -4.03v-1h-3a2 2 0 0 1 -1.995 -1.85l-.005 -.15v-3a2 2 0 0 1 2 -2z" /></svg></span>
+                                        {item.feedback}
+                                        <span class="iconBox quote2"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-quote"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 5a2 2 0 0 1 2 2v6c0 3.13 -1.65 5.193 -4.757 5.97a1 1 0 1 1 -.486 -1.94c2.227 -.557 3.243 -1.827 3.243 -4.03v-1h-3a2 2 0 0 1 -1.995 -1.85l-.005 -.15v-3a2 2 0 0 1 2 -2z" /><path d="M18 5a2 2 0 0 1 2 2v6c0 3.13 -1.65 5.193 -4.757 5.97a1 1 0 1 1 -.486 -1.94c2.227 -.557 3.243 -1.827 3.243 -4.03v-1h-3a2 2 0 0 1 -1.995 -1.85l-.005 -.15v-3a2 2 0 0 1 2 -2z" /></svg></span>                                        
+                                     </p> : null }
+                            <div class="givenNamePic flex flex-col items-center gap-8">
+                                    <span class="givenAvatar">
+                                        {item.image ? <img src={item.image} alt="User Avatar" /> : null}
+                                    </span>    
+                                    <span class="flex flex-col items-center gap-4">
+                                        {item.name? <p class="givenName">{item.name}</p>: null}
+                                        {item.designation? <p class="givenDesignation">{item.designation}</p> : null}
+                                    </span>
+                            </div>
+                        </div> : null)
+                    
+                        );
+                    })}
+            {usersRow2.map(item => {
+                        return (
+                       (!item.blankImageClass && item.image?   <div class="textimonialContentBox flex flex-col items-center justify-center">
                                 {item.feedback? 
                                     <p class="testimonialDescp"> 
                                         <span class="iconBox quote1"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-quote"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 5a2 2 0 0 1 2 2v6c0 3.13 -1.65 5.193 -4.757 5.97a1 1 0 1 1 -.486 -1.94c2.227 -.557 3.243 -1.827 3.243 -4.03v-1h-3a2 2 0 0 1 -1.995 -1.85l-.005 -.15v-3a2 2 0 0 1 2 -2z" /><path d="M18 5a2 2 0 0 1 2 2v6c0 3.13 -1.65 5.193 -4.757 5.97a1 1 0 1 1 -.486 -1.94c2.227 -.557 3.243 -1.827 3.243 -4.03v-1h-3a2 2 0 0 1 -1.995 -1.85l-.005 -.15v-3a2 2 0 0 1 2 -2z" /></svg></span>
