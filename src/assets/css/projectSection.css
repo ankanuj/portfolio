@@ -87,6 +87,9 @@
 .pC3 .projectImageBox{
     background-image: url('/veritasProj.png');
 }
+.pC4 .projectImageBox{
+    background-image: url('/Pet-medication.png');
+}
 .liveText{
     font-size: var(--16px);
     color: var(--primary-color);
